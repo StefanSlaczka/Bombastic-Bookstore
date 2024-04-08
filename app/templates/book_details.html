@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
 <html lang="en">
 <head>
   {% extends "base.html" %}
@@ -13,10 +16,11 @@
   <script type="text/javascript" src="/static/cart-box.js"></script>
 </head>
 <body>
-  <h1>Book Details</h1>
-  <div class="book-description">
-    <!-- Left column for image -->
-    <div class="left-column">
+  <!-- <a href="/" class="home-button">Home</a> -->
+
+    <h1>Book Details</h1>
+    <div class="book-description">
+      <div class="left-column">
       <!-- Still pulling book cover from open lib API -->
       {% if book_data[0] in BooksWithNoCover %}
         <img class="book-cover" src="/static/images/coverNotFound.png" alt="Book Cover">
@@ -47,4 +51,5 @@
   </div>
   {% endblock %}
 </body>
+{% endblock %}
 </html>

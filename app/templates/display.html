@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 {% extends "base.html" %} {% block content %}
 <html lang="en">
+{% extends "base.html" %}
+
+{% block content %}
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,8 +18,16 @@
     <script type="text/javascript" src="/static/checkout-box.js"></script>
   </head>
   <body>
-  </div>
-    <h2>Our Books</h2>
+  <!-- Button to return home -->
+    <!-- <a href="/" class="home-button">Home</a> -->
+    <!-- commented out with addition of Navbar -->
+
+    </div>
+      <!-- Stefan's comment:
+              To make this optimal, we are going to make this part OOP. This is just a layout explanation
+              for later on to make implementing it a lot easier.
+      -->
+    <strong>Our Books</strong>
     <div class="book-details">
       {% set index = 0 %}
       {% for book in books_data %}
@@ -53,5 +64,6 @@
         <a href="{{ url_for('display', page=current_page + 1) }}">Next Page</a>
     </div>
   </body>
-  {% endblock %}
+
+{% endblock %}
 </html>

@@ -11,9 +11,5 @@
           "src": "/(.*)",
           "dest": "/index.py"
         }
-      ],
-      "framework": {
-        "name": "python",
-        "version": "3.9"
-      }
+      ]
     }

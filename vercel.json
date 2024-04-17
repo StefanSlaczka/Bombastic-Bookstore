@@ -1,16 +1,16 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "index.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/index.py"
-      }
-    ]
-  }
-  
+        {
+          "src": "index.py",
+          "use": "@vercel/python",
+          "cmd": "gunicorn index:app"
+        }
+      ],
+      "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "/index.py"
+        }
+      ]
+    }

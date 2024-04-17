@@ -3,8 +3,7 @@
     "builds": [
         {
           "src": "index.py",
-          "use": "@vercel/python",
-          "cmd": "gunicorn index:app"
+          "use": "@vercel/python"
         }
       ],
       "routes": [
@@ -12,5 +11,9 @@
           "src": "/(.*)",
           "dest": "/index.py"
         }
-      ]
+      ],
+      "framework": {
+        "name": "python",
+        "version": "3.9"
+      }
     }

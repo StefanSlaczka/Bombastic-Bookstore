@@ -237,3 +237,4 @@ fabric.properties
 flask_session/
 .idea/misc.xml
 /.idea
+.vercel
